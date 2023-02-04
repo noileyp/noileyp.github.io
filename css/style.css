@@ -63,7 +63,7 @@ body {
   grid-column-start: 5;
   grid-column-end: 7;
   grid-row-start: 1;
-  grid-row-end: 8;
+  grid-row-end: 9;
 
   /** Alternative Syntax **/
   /* grid-column: 5 / span 4;
