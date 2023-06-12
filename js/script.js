@@ -1,17 +1,20 @@
-var imageThumbs = document.getElementById("image-thumbs");
-var currentImage = document.getElementById("current-image");
+function openTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
-//I need to change the for loop below to not stop at a hardcoded value but rather the number of photos in the S3 bucket.
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
 
-for (var i = 1; i <= 9; i++) {
-  var thumb = document.createElement("img");
-  thumb.src = "https://nkpphotography.s3.amazonaws.com/" + i + ".jpg";
-  thumb.alt = "Image " + i;
-  thumb.classList.add("thumb");
-  imageThumbs.appendChild(thumb);
-  thumb.addEventListener(
-    "click", function() {
-      currentImage.src = this.src;
-    }
-  );
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
 }

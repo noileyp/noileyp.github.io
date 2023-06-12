@@ -1,18 +1,31 @@
-<!doctype html>
-<html lang="en-US"> 
-  <head> 
-    <title>Image Gallery</title> 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-  </head> 
-  <body> 
-    <div class="intro"> 
-      <h2>Image Gallery</h2> 
-      <p>Select a thumbnail below to view the image</p> 
-	  <div id="image-gallery">
-	    <img id="current-image" src="https://nkpphotography.s3.amazonaws.com/1.jpg" alt="Image 1">
-		<div id="image-thumbs"></div>
-      </div>
-    </div> 
-	<script src="js/script.js"></script>
-  </body>
-</html>
+<script src="./js/script.js"></script>
+<link rel="stylesheet" href="./css/style.css">
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Bio')" id="defaultOpen">Bio</button>
+  <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
+  <button class="tablinks" onclick="openTab(event, 'Photography')">Photography</button>
+</div>
+
+<!-- Tab content -->
+<div id="Bio" class="tabcontent">
+  <h3>Bio</h3>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+</div>
+
+<!-- Open the tab with id "defaultOpen" on page load -->
+<script>
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+<div id="Resume" class="tabcontent">
+  <h3>Resume</h3>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+</div>
+
+<div id="Photography" class="tabcontent">
+  <h3>Photography</h3>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+  <img src="http://s3.amazonaws.com/nkpphotography/1.jpg" class="image">
+</div>
